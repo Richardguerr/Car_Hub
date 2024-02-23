@@ -5,6 +5,11 @@ const nextConfig = {
         domains: ["cdn.imagin.studio"]
       
     },
+    experimental: {
+        images: {
+          unoptimized: true,
+        },
+      },
   }
    
 export default nextConfig
