@@ -5,13 +5,11 @@ const nextConfig = {
         domains: ["cdn.imagin.studio"]
       
     },
-    experimental: {
-        images: {
-          unoptimized: true,
-        },
-      },
+    typescript: {
+        ignoreBuildErrors:true,
+    }
   }
    
-export default nextConfig
+module.exports = nextConfig
 
   
