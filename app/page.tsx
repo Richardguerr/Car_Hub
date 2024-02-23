@@ -1,22 +1,18 @@
 import { CarCard,Hero,SearchBar,CustomFilter,ShowMore } from "@/components";
-import { fuels, manufacturers, yearsOfProduction } from "@/constants";
+import { fuels, yearsOfProduction } from "@/constants";
 import { HomeProps } from "@/types";
 import { fetchCars } from "@/utils";
-import { Main } from "next/document";
-import Image from "next/image";
 
 
-export default async function Home({searchParams}:HomeProps) {
 
-  const allCars = await fetchCars(
-    {
-    manufacturer: searchParams.manufacturer || '', 
+export default async function Home({ searchParams }: HomeProps) {
+  const allCars = await fetchCars({
+    manufacturer: searchParams.manufacturer || "",
     year: searchParams.year || 2022,
-    fuel: searchParams.fuel || '',
+    fuel: searchParams.fuel || "",
     limit: searchParams.limit || 10,
-    model: searchParams.model || '',
-  }
-  );
+    model: searchParams.model || "",
+  });
 
   console.log("Carros" + allCars.length)
   

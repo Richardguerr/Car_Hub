@@ -1,4 +1,4 @@
-import { LargeNumberLike } from "crypto";
+
 import { MouseEventHandler } from "react";
 
 export interface CustomButtonProps {
@@ -34,7 +34,7 @@ export interface CarProps{
 
 export interface FilterProps {
     manufacturer: string,
-    year:number,
+    year: number,
     fuel: string,
     limit: number,
     model: string,
